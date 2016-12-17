@@ -5,10 +5,11 @@
 <table class="highlight" >
   <thead>
     <tr>
-     <th>Imagen</th>
+     
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
+      <th>Imagen</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,12 +17,13 @@
   <tbody>
     <% @contactos.each do |contacto| %>
       <tr>
-        <td>
-         <img src="<%= contacto.imagen %>" width="50"/>
-       </td>
+        
         <td><%= contacto.name %></td>
         <td><%= contacto.email %></td>
        <td><%= contacto.phone %></td>
+       <td>
+         <img src="<%= contacto.imagen %>" width="50"/>
+       </td>
         <td><a href= "/contactos/<%= contacto.id%>"class="btn-floating btn-large waves-effect 	            waves-light red"><i class="material-icons">pageview
            </i>
            </a>
